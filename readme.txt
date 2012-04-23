@@ -15,7 +15,7 @@ Plugin URI: http://wordpress.org/extend/plugins/fake-about-me/
 
 
 
-Contributors: bitpenguin
+Contributors: Brlocky
 
 
 
@@ -91,12 +91,18 @@ the directory of the stable readme.txt, so in this case, "/tags/4.3/screenshot-1
 
 
 == Upgrade Notice ==
+Fix path to plugin
 I18n system is now fully working
 
 
 
 
 == Changelog ==
+
+
+= 1.0.2 =
+
+* fix path to plugin ( fake-about-me to fake-about-me-fake )
 
 = 1.0.1 =
 

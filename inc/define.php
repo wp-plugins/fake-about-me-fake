@@ -22,10 +22,10 @@ define('FAKEABOUTME_VERSION', '1.0');
 
 define('FAKEABOUTME_DIR', realpath(dirname(__FILE__) . '/..'));
 
-define('FAKEABOUTME_BASE', get_home_url() . '/wp-content/plugins/fake-about-me');
+define('FAKEABOUTME_BASE', get_home_url() . '/wp-content/plugins/fake-about-me-fake');
 
 
-define('FAKEABOUTME_LANG_DIR', 'fake-about-me/languages');  // <-- important last slash
+define('FAKEABOUTME_LANG_DIR', 'fake-about-me-fake/languages');  // <-- important last slash
 
 
 define('FAKEABOUTME_JS_DIR', FAKEABOUTME_BASE . '/js');
