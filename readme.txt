@@ -11,7 +11,7 @@ Author: Brlocky
 
 Author URI: http://www.gabyweb.com/
 
-Plugin URI: http://wordpress.org/extend/plugins/fake-about-me/
+Plugin URI: http://wordpress.org/extend/plugins/fake-about-me-fake/
 
 
 
