@@ -12,10 +12,13 @@ $Fakeaboutme = new Fakeaboutme();
 
 class Fakeaboutme{
 
-	function Fakeaboutme()
-	{
-
-	}
+	function __construct()
+    {
+		//Language
+		//Can Run on Constructor or any where else, just keep last slash on language dir
+        load_plugin_textdomain('fakeaboutme', false, FAKEABOUTME_LANG_DIR );
+    }
+ 
 
 
     /**
@@ -28,8 +31,7 @@ class Fakeaboutme{
 		 * Admin Actions and Filters
 		 */
 		 
-		add_action( 'init', array($this,'load_langugages'));
-		
+	 	
  		if( is_admin() )
 		{ 
 			add_action( 'init', array($this,'register_posts'));
@@ -48,15 +50,7 @@ class Fakeaboutme{
 	} 
 
 
-
-	/**
-	*	LOAD LANGUAGES
-	**/
-	function load_langugages()
-	{
-		//Load Langugages
-		load_plugin_textdomain('fakeaboutme', false, basename( dirname( __FILE__ ) ) . '/languages' );
-	}
+ 
 
 
 
@@ -234,7 +228,7 @@ class Fakeaboutme{
 
                     <tr class="form-field">
 
-                        <td><?=_e('ApiKey','fakeaboutme')?></td>
+                        <td><?=__('ApiKey','fakeaboutme')?></td>
 
                         <td><input id="fakeaboutme_apikey" name="fakeaboutme_apikey" type="text" class="widefat" value="<?=$fakeaboutme_apikey?>" autocomplete="off" /></td>
 

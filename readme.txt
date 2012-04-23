@@ -19,7 +19,7 @@ Contributors: bitpenguin
 
 
 
-Version: 1.0
+Version: 1.0.1
 
 
 
@@ -73,27 +73,17 @@ e.g.
 
 
 = A question that someone might have =
-
-
-
 An answer to that question.
 
-
-
-= What about foo bar? =
-
-
-
-Answer to foo bar dilemma.
 
 
 
 == Screenshots ==
 
 
+****soon***
 
 1. This screen shot description corresponds to screenshot-1.(png|jpg|jpeg|gif). Note that the screenshot is taken from
-
 the directory of the stable readme.txt, so in this case, "/tags/4.3/screenshot-1.png" (or jpg, jpeg, gif)
 
 2. This is the second screen shot
@@ -101,10 +91,17 @@ the directory of the stable readme.txt, so in this case, "/tags/4.3/screenshot-1
 
 
 == Upgrade Notice ==
-nothing to add
+I18n system is now fully working
+
+
 
 
 == Changelog ==
+
+= 1.0.1 =
+
+* add language system, and PT Language
+
 
 = 1.0 =
 

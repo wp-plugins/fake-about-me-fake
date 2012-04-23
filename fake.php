@@ -21,7 +21,8 @@ License: A "Slug" license name e.g. GPL2
 
 */
 
-  
+ 
+ 
 
 if (!defined('ABSPATH')) {
     die('ABSPATH');
@@ -44,20 +45,42 @@ if (!defined('FAKEABOUTME_INIT')) {
 	require_once FAKEABOUTME_INC_DIR . '/fakeaboutme_widget.class.php';
 
 
+	 
+	
+	
+	//LANG TEST
+		
+	
+/*	$locale = "deu_DEU";
+	
+	putenv("LC_ALL=$locale");
+	setlocale(LC_ALL, $locale);
+	
+	//FAKEABOUTME_LANG_DIR
+		
+	bindtextdomain("greetings", "./locale");
+	textdomain("greetings");
+	
+	echo _("Hello World");
+	*/	
+	
+	
+	
+	
+	
 	
 	
  
 
 	/**
      * Start Widget
-     */
-	 
+     */	 
 	$Fakeaboutme->run();
    
+   	
    
-
 	add_action("widgets_init", 'fakeaboutme_register_widget');  
-	load_plugin_textdomain('Fakeaboutme_Widget', false, basename( dirname( __FILE__ ) ) . '/languages' );
+	//load_plugin_textdomain('Fakeaboutme_Widget', false, FAKEABOUTME_LANG_DIR );
 	
 	register_activation_hook( __FILE__, 'fakeaboutme_activate');
 	register_deactivation_hook( __FILE__, 'fakeaboutme_deactivate');
@@ -101,18 +124,6 @@ if (!defined('FAKEABOUTME_INIT')) {
 	function fakeaboutme_deactivate(){		
 		delete_option('fake-about-me-settings');
 	}
- 
-
 	
-
- 
-
-
-
 }
-
- 
-
-
-
 ?>

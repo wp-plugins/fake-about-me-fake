@@ -12,20 +12,20 @@ if (!defined('ABSPATH')) {
 
 
 
-
-
 //DEFINE FAKEABOUTME PLUGIN CONSTANTS
 
 define('FAKEABOUTME_INIT', true);
 
 define('FAKEABOUTME_VERSION', '1.0');
 
-
+ 
 
 define('FAKEABOUTME_DIR', realpath(dirname(__FILE__) . '/..'));
 
 define('FAKEABOUTME_BASE', get_home_url() . '/wp-content/plugins/fake-about-me');
 
+
+define('FAKEABOUTME_LANG_DIR', 'fake-about-me/languages');  // <-- important last slash
 
 
 define('FAKEABOUTME_JS_DIR', FAKEABOUTME_BASE . '/js');
@@ -33,8 +33,6 @@ define('FAKEABOUTME_JS_DIR', FAKEABOUTME_BASE . '/js');
 define('FAKEABOUTME_CSS_DIR', FAKEABOUTME_BASE . '/css');
 
 define('FAKEABOUTME_INC_DIR', FAKEABOUTME_DIR . '/inc');
-
-
 
 
 
@@ -56,7 +54,9 @@ if ( ! function_exists('debug'))
 
     {
 
-		echo '<pre style="background-color: yellow; color: black; border: 1px solid red; font-size: 11px;">';		
+		echo '<pre style="background-color: yellow; color: black; border: 1px solid red; font-size: 11px;"><br />
+<br />
+';		
 
 
 
@@ -87,3 +87,4 @@ if ( ! function_exists('fix_http'))
 		return $url;	
 	}
 }
+ 
