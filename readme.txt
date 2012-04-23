@@ -19,7 +19,7 @@ Contributors: Brlocky
 
 
 
-Version: 1.0.2
+Version: 2.0
 
 
 
@@ -91,6 +91,7 @@ the directory of the stable readme.txt, so in this case, "/tags/4.3/screenshot-1
 
 
 == Upgrade Notice ==
+Fix Uri to Plugin inside readme.txt
 Fix path to plugin
 I18n system is now fully working
 
@@ -99,6 +100,8 @@ I18n system is now fully working
 
 == Changelog ==
 
+= 2.0 =
+* fix uri to plugin in readme.txt
 
 = 1.0.2 =
 
