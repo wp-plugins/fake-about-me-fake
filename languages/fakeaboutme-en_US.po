@@ -1,0 +1,180 @@
+# Copyright (C) 2012 
+# This file is distributed under the same license as the  package.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/fake-about-me-fake\n"
+"POT-Creation-Date: 2012-04-23 03:38:58+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2012-04-23 05:53-0000\n"
+"Last-Translator: Joao Cunha <brlocky@gmail.com>\n"
+"Language-Team: Brlocky <info@gabyweb.com>\n"
+"X-Poedit-Language: English\n"
+"X-Poedit-Country: UNITED STATES\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+#: inc/fakeaboutme.class.php:187
+#: inc/fakeaboutme.class.php:226
+msgid "Fake About Me"
+msgstr ""
+
+#: inc/fakeaboutme.class.php:227
+msgid "Fake Name Generator <b>api key</b> and <b>default settings</b>."
+msgstr ""
+
+#: inc/fakeaboutme.class.php:237
+msgid "ApiKey"
+msgstr ""
+
+#: inc/fakeaboutme.class.php:307
+#: inc/fakeaboutme.class.php:557
+msgid "Language"
+msgstr ""
+
+#: inc/fakeaboutme.class.php:385
+#: inc/fakeaboutme.class.php:635
+msgid "Genre"
+msgstr ""
+
+#: inc/fakeaboutme.class.php:389
+#: inc/fakeaboutme.class.php:639
+msgid "Random"
+msgstr ""
+
+#: inc/fakeaboutme.class.php:391
+#: inc/fakeaboutme.class.php:641
+msgid "Male"
+msgstr ""
+
+#: inc/fakeaboutme.class.php:393
+#: inc/fakeaboutme.class.php:643
+msgid "Female"
+msgstr ""
+
+#: inc/fakeaboutme.class.php:411
+msgid "More Information"
+msgstr ""
+
+#: inc/fakeaboutme.class.php:451
+msgid "Settings"
+msgstr ""
+
+#: inc/fakeaboutme.class.php:460
+msgid "Identities"
+msgstr ""
+
+#: inc/fakeaboutme.class.php:657
+msgid "settings"
+msgstr ""
+
+#: inc/fakeaboutme.class.php:769
+msgid "Full Name"
+msgstr ""
+
+#: inc/fakeaboutme.class.php:773
+#: inc/fakeaboutme_widget.class.php:33
+msgid "Gender"
+msgstr ""
+
+#: inc/fakeaboutme.class.php:777
+#: inc/fakeaboutme_widget.class.php:40
+msgid "Email"
+msgstr ""
+
+#: inc/fakeaboutme.class.php:781
+#: inc/fakeaboutme_widget.class.php:34
+msgid "Birthday"
+msgstr ""
+
+#: inc/fakeaboutme.class.php:785
+#: inc/fakeaboutme_widget.class.php:42
+msgid "Occupation"
+msgstr ""
+
+#: inc/fakeaboutme.class.php:790
+#: inc/fakeaboutme_widget.class.php:38
+msgid "Domain"
+msgstr ""
+
+#: inc/fakeaboutme.class.php:794
+#: inc/fakeaboutme_widget.class.php:47
+msgid "Address"
+msgstr ""
+
+#: inc/fakeaboutme.class.php:798
+#: inc/fakeaboutme_widget.class.php:46
+msgid "City"
+msgstr ""
+
+#: inc/fakeaboutme.class.php:802
+#: inc/fakeaboutme_widget.class.php:48
+msgid "State"
+msgstr ""
+
+#: inc/fakeaboutme.class.php:806
+#: inc/fakeaboutme_widget.class.php:49
+msgid "Zip"
+msgstr ""
+
+#: inc/fakeaboutme.class.php:810
+msgid "Phone"
+msgstr ""
+
+#: inc/fakeaboutme_widget.class.php:10
+msgid "A about me form for your site"
+msgstr ""
+
+#: inc/fakeaboutme_widget.class.php:11
+msgid "FakeAboutMe"
+msgstr ""
+
+#: inc/fakeaboutme_widget.class.php:31
+msgid "Bio"
+msgstr ""
+
+#: inc/fakeaboutme_widget.class.php:32
+msgid "Name"
+msgstr ""
+
+#: inc/fakeaboutme_widget.class.php:37
+msgid "Contact"
+msgstr ""
+
+#: inc/fakeaboutme_widget.class.php:45
+msgid "Location"
+msgstr ""
+
+#: inc/fakeaboutme_widget.class.php:90
+msgid "To use this widget go to (Identities/Add New) or click "
+msgstr ""
+
+#: inc/fakeaboutme_widget.class.php:91
+msgid "here"
+msgstr ""
+
+#: inc/fakeaboutme_widget.class.php:105
+msgid "Title"
+msgstr ""
+
+#: inc/fakeaboutme_widget.class.php:109
+msgid "Header Backgroud Color"
+msgstr ""
+
+#: inc/fakeaboutme_widget.class.php:113
+msgid "Header Text Color"
+msgstr ""
+
+#: inc/fakeaboutme_widget.class.php:118
+msgid "Identity"
+msgstr ""
+
+#: inc/fakeaboutme_widget.class.php:120
+msgid "no identity"
+msgstr ""
+
+#: inc/fakeaboutme_widget.class.php:125
+msgid "Add new Identity"
+msgstr ""
+
