@@ -1,0 +1,31 @@
+ul.fakeaboutme{
+	margin-left: 0px !important;
+	list-style: none;
+}
+
+
+ul.fakeaboutme h4{
+	font-weight: bold;
+	font-size: 1.1em;
+	position: relative;
+	margin-bottom: 5px;
+	padding: 2px;
+	padding-left: 5px;
+}
+
+ul.fakeaboutme li{
+	display: block;
+	margin-right: 2px;
+	margin-bottom: 2px;
+}
+
+ul.fakeaboutme li label{
+	display: block;
+	margin-bottom: 2px;
+}
+
+ul.fakeaboutme li label span{
+	float: right;
+	font-weight: bold;
+	font-size: 90%;
+}
