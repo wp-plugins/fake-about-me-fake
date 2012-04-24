@@ -30,7 +30,7 @@ Requires at least: 3.0.1
 
 Tested up to: 3.3.2
 
-Stable tag: 3.3.2
+Stable tag: 2.0
 
 
 
