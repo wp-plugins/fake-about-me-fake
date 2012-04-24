@@ -12,8 +12,7 @@ $Fakeaboutme = new Fakeaboutme();
 
 class Fakeaboutme{
 
-	function __construct()
-    {
+	function __construct(){
 		//Language
 		//Can Run on Constructor or any where else, just keep last slash on language dir
         load_plugin_textdomain('fakeaboutme', false, FAKEABOUTME_LANG_DIR );
@@ -26,12 +25,10 @@ class Fakeaboutme{
      *
      * @return void
      */
-    function run() {
+    function run(){
 		/**
 		 * Admin Actions and Filters
 		 */
-		 
-	 	
  		if( is_admin() )
 		{ 
 			add_action( 'init', array($this,'register_posts'));
@@ -56,9 +53,8 @@ class Fakeaboutme{
 
 
 	//Ajax Service Call FAKENAMEGENERATOR API
-	function service_load() {
-	 	if( isset($_GET['fakeaboutme_language']) && isset($_GET['fakeaboutme_genre']))
-		{
+	function service_load(){
+	 	if( isset($_GET['fakeaboutme_language']) && isset($_GET['fakeaboutme_genre'])){
 			$output = $this->runService($_GET['fakeaboutme_country'],$_GET['fakeaboutme_language'],$_GET['fakeaboutme_genre']);
 			if($output == 0)
 				echo "Error with Service, please check API Key";
@@ -70,11 +66,10 @@ class Fakeaboutme{
 		
 
  	//Service to get new identitie -> Fake name Generator Script
-	function runService($country,$language,$genre)
-	{
+	function runService($country,$language,$genre){
 		$options = get_option('fake-about-me-settings');
 		$apikey = isset($options['fakeaboutme_apikey']) ? $options['fakeaboutme_apikey'] : die('error API KEY');
-
+		
 		//country is not implemented
 		$country = 'us';
 
@@ -109,12 +104,10 @@ class Fakeaboutme{
 	
 
 	//js for settings in fab_indetities type
-	function fab_service_script() {
-
+	function fab_service_script(){
 		global $post_type; 
 
-		if( 'fab_identities' == $post_type )
-		{
+		if( 'fab_identities' == $post_type ){
 			wp_enqueue_script( 'fab_service_script', FAKEABOUTME_JS_DIR . '/service.js' );
 	        wp_localize_script( 'fab_service_script', 'ajax_object', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ) ) );
 		}
@@ -124,7 +117,7 @@ class Fakeaboutme{
 	/**********************************
 	* WIDGET CSS
 	*/
-	function fab_widget_css() {
+	function fab_widget_css(){
 		wp_register_style( 'fab-widget-style', FAKEABOUTME_CSS_DIR .'/fake-about-me.css' );
 		wp_enqueue_style( 'fab-widget-style' );
 	}
@@ -138,8 +131,7 @@ class Fakeaboutme{
      *
      * @return void
      */
-	function register_posts()
-	{
+	function register_posts(){
 		register_post_type('fab_identities',array(
 			 'labels' => array(
 				'singular_name' => 'Identity',
@@ -177,7 +169,7 @@ class Fakeaboutme{
      * @return void
      */
 
-    function admin_bar_menu() {
+    function admin_bar_menu(){
 		add_submenu_page( 'options-general.php',  __('Fake About Me'), 'Fake About Me', 8, 'fake-about-me', array($this,'draw_settings'));
 	}
 
@@ -191,8 +183,7 @@ class Fakeaboutme{
 	*   - view, save, reset
 	*/
 
- 	function draw_settings()
-	{
+ 	function draw_settings(){
   		//Save Settings
 		if($_POST && wp_verify_nonce($_POST['fakeboutme_save_settings_nonce'], __FILE__))
 		{
@@ -405,23 +396,10 @@ class Fakeaboutme{
                 <h2><?=_e('More Information','fakeaboutme')?></h2>
 
                 <p> <a href="http://www.webservius.com/services/CorbanWork/fakename" target="_blank"><b>Free API signup</b> - 50 FREE units per month</a> </p>
-
-                
-
                 <p> <a href="http://www.fakenamegenerator.com/" target="_blank">Fake Name Generator</a></p>
-
-                
-
                 <p> <a href="http://www.fakenamegenerator.com/api.php" target="_blank">API documentation</a></p>
-
- 
-
- 
-
-				 <p>This product uses the Fake Name Generator API but is not endorsed or certified by the Fake Name Generator.</p>
-
+				<p>This product uses the Fake Name Generator API but is not endorsed or certified by the Fake Name Generator.</p>
             </form>
-
 		</div>
 
         <?
@@ -433,11 +411,8 @@ class Fakeaboutme{
 	
 
 	/*
-
 	 * Init metadata
-
 	 */
-
 	function create_metadata(){	
 
 		add_meta_box(
@@ -468,8 +443,7 @@ class Fakeaboutme{
 	/*
 	 * metadata settings
 	 */
-	function create_metadata_settings()
-	{
+	function create_metadata_settings(){
 		global $post;
  
 		//get saves options
@@ -647,13 +621,9 @@ class Fakeaboutme{
         
 		
         <p class="submit"><input type="button" name="fakeaboutme_btn_settings" id="fakeaboutme_btn_settings" class="button-primary" value="Get Fake Identity"></p>
-
         <p><a target="_blank" href="<?=admin_url('options-general.php?page=fake-about-me')?>"><?=_e('settings','fakeaboutme')?></a></p>
-
         <p>This product uses the Fake Name Generator API but is not endorsed or certified by the Fake Name Generator.</p>
-
 		<?php
-
 	}
 
 	 
@@ -699,11 +669,9 @@ class Fakeaboutme{
 
 	*/
 
-	function fakeLoad($xmlData=null)
-	{
+	function fakeLoad($xmlData=null){
 		//Testig data
-		if($xmlData == null)
-		{
+		if($xmlData == null){
 			$xmlData = '<?xml version="1.0" encoding="UTF-8"?>
 
 			<get_identity generator="zend" version="1.0"><identity><full_name><name>full_name</name><label>Name</label><value>Lucila R. Hesse</value></full_name><given_name><name>given_name</name><label>Given Name</label><value>Lucila</value></given_name><middle_name><name>middle_name</name><label>Middle Name</label><value>R</value></middle_name><surname><name>surname</name><label>Surname</label><value>Hesse</value></surname><maiden_name><name>maiden_name</name><label>Maiden Name</label><value>Aitken</value></maiden_name><gender><name>gender</name><label>Gender</label><value>female</value></gender><email_address><name>email_address</name><label>Email Address</label><value>LucilaRHesse@spambob.com</value></email_address><street1><name>street1</name><label>Address</label><value>Avda. Explanada Barnuevo, 78</value></street1><street2><name>street2</name><label></label><value>35280 Ingenio</value></street2><street3><name>street3</name><label></label><value></value></street3><house_number><name>house_number</name><label>House Number</label><value>78</value></house_number><street><name>street</name><label>Street</label><value>Avda. Explanada Barnuevo</value></street><city><name>city</name><label>City</label><value>Ingenio</value></city><state><name>state</name><label>State</label><value>Las Palmas</value></state><zip><name>zip</name><label>Postal Code</label><value>35280</value></zip><country_code><name>country_code</name><label>Country Code</label><value>ES</value></country_code><phone_number><name>phone_number</name><label>Phone Number</label><value>928 255 976</value></phone_number><birthday><name>birthday</name><label>Birthday</label><value>12/10/1946</value></birthday><occupation><name>occupation</name><label>Occupation</label><value>Administrative law judge</value></occupation><password><name>password</name><label>Password</label><value>yeeph9jo5R</value></password><domain><name>domain</name><label>Domain</label><value>FamousWins.com</value></domain><cc_type><name>cc_type</name><label>Credit Card Type</label><value>MasterCard</value></cc_type><cc_number><name>cc_number</name><label>Credit Card Number</label><value>5179244499219747</value></cc_number><cc_exp_month><name>cc_exp_month</name><label>Credit Card Expiration Month</label><value>3</value></cc_exp_month><cc_exp_year><name>cc_exp_year</name><label>Credit Card Expiration Year</label><value>2015</value></cc_exp_year><cc_cvv><name>cc_cvv</name><label>Credit Card CVV</label><value>093</value></cc_cvv><national_id><name>national_id</name><label>National ID</label><value></value></national_id><national_id_type><name>national_id_type</name><label>National ID Type</label><value></value></national_id_type><blood_type><name>blood_type</name><label>Blood Type</label><value>B+</value></blood_type><weight_kilograms><name>weight_kilograms</name><label>Weight (Kilograms)</label><value>102.0</value></weight_kilograms><weight_pounds><name>weight_pounds</name><label>Weight (Pounds)</label><value>224.4</value></weight_pounds><height_centimeters><name>height_centimeters</name><label>Height (Centimeters)</label><value>164</value></height_centimeters><height_inches><name>height_inches</name><label>Height (Inches)</label><value>65</value></height_inches><ups_tracking_number><name>ups_tracking_number</name><label>UPS Tracking Number</label><value>1Z 818 473 08 1938 974 9</value></ups_tracking_number></identity><status>success</status></get_identity>';
@@ -755,8 +723,7 @@ class Fakeaboutme{
 	*	Draw Identity Table
 	*	Receive arrayData
 	*/
-	function drawIdentityTable($data)
-	{
+	function drawIdentityTable($data){
 		?>
         <table id="fab_form_identity" class="form-table">
         	<tr class="form-field">

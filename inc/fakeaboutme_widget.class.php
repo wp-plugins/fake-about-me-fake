@@ -1,13 +1,10 @@
 <?php
 
 
-
-
-
 class Fakeaboutme_Widget extends WP_Widget{
 
-	function __construct() {
-		$widget_ops = array('classname' => 'widget_fakeaboutme', 'description' => __( "A about me form for your site") );
+	function __construct(){
+		$widget_ops = array('classname' => 'widget_fakeaboutme', 'description' => __( "A about me widget for your site") );
 		parent::__construct('fakeaboutme', __('FakeAboutMe','fakeaboutme'), $widget_ops);
 	}
  
@@ -55,7 +52,7 @@ class Fakeaboutme_Widget extends WP_Widget{
 	}
   
 	
-	function update( $new_instance, $old_instance ) {
+	function update( $new_instance, $old_instance ){
 		$instance = $old_instance;
 		$new_instance = wp_parse_args((array) $new_instance, array( 'title' => '','identity' => '', 'color' => '', 'text' => ''));
 		$instance['title'] = strip_tags($new_instance['title']);
@@ -67,7 +64,7 @@ class Fakeaboutme_Widget extends WP_Widget{
  
 	
 	
-	function form( $instance ) {
+	function form( $instance ){
 				
 		$instance = wp_parse_args( (array) $instance, array( 'title' => 'Fake About Me', 'identity' => '0', 'color' => '#E5EBEC', 'text' => '#000' ) );		
 
@@ -83,8 +80,7 @@ class Fakeaboutme_Widget extends WP_Widget{
 		
 
 		//need to add new identity
-		if(empty($result->posts))
-		{
+		if(empty($result->posts)){
 			?>
             <p>
 				<?=__( 'To use this widget go to (Identities/Add New) or click ' , 'fakeaboutme' )?>

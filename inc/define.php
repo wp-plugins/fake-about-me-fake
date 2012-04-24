@@ -16,7 +16,7 @@ if (!defined('ABSPATH')) {
 
 define('FAKEABOUTME_INIT', true);
 
-define('FAKEABOUTME_VERSION', '1.0');
+define('FAKEABOUTME_VERSION', '2.0.2');
 
  
 

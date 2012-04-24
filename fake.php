@@ -2,22 +2,21 @@
 
 /**
  * @package fakeaboutme
- * @version 1.0
+ * @version 2.0.2
 */
 /*
 
 Plugin Name: FAKE About Me
 
-Plugin URI: http://wordpress.org/extend/plugins/fake-about-me/
+Plugin URI: http://wordpress.org/extend/plugins/fake-about-me-fake/
 
 Description: Create a Fake identities or just create your own about me description, creates a new widget that allow you to choose your diferent identities.
 
 Author: Brlocky
 Author URI: http://www.gabyweb.com/
 
-Version: 1.0
+Version: 2.0.2
 License: A "Slug" license name e.g. GPL2
-
 
 */
 
