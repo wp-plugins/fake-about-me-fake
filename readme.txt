@@ -54,23 +54,18 @@ e.g.
 
 
 
-1. Upload "fakeaboutme" to the "/wp-content/plugins/" directory
+1. Upload "fake-about-me-fake" directory to "/wp-content/plugins/"
 
 2. Activate the plugin through the "Plugins" menu in WordPress
 
 3. Create a new Identity
 
-4. Add the Widget in your templates
-
-
-
+4. Add the Widget in your templates and configure
 
 
 
 
 == Frequently Asked Questions ==
-
-
 
 = A question that someone might have =
 An answer to that question.
