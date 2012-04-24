@@ -19,7 +19,7 @@ Contributors: Brlocky
 
 
 
-Version: 2.0
+Version: 2.0.1
 
 
 
@@ -30,7 +30,7 @@ Requires at least: 3.0.1
 
 Tested up to: 3.3.2
 
-Stable tag: 2.0
+Stable tag: 2.0.1
 
 
 
@@ -99,6 +99,9 @@ I18n system is now fully working
 
 
 == Changelog ==
+
+= 2.0.1 =
+* fix tag version in readme.txt
 
 = 2.0 =
 * fix uri to plugin in readme.txt
